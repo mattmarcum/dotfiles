@@ -8,7 +8,7 @@ inoremap jj <ESC>
 "nmap <leader>hl :let @/ = ""<CR>
 
 set background=dark
-colorscheme vividchalk
+colorscheme darkblue
 
 " Disambiguate ,a & ,t from the Align plugin, making them fast again.
 "
