@@ -1,27 +1,34 @@
 # This tmux statusbar config was created by tmuxline.vim
 # on Tue, 05 May 2015
 
-set -g status-bg "colour000"
 set -g message-command-fg "colour252"
+set -g message-fg "colour252"
+set -g message-bg "colour000"
+set -g message-command-bg "colour000"
+
+
+set -g status "on"
+set -g status-attr "none"
+set -g status-bg "colour236"
 set -g status-justify "left"
 set -g status-left-length "100"
-set -g status "on"
-set -g pane-active-border-fg "colour117"
-set -g message-bg "colour000"
+set -g status-left-attr "none"
+
 set -g status-right-length "100"
 set -g status-right-attr "none"
-set -g message-fg "colour252"
-set -g message-command-bg "colour000"
-set -g status-attr "none"
+set -g status-right-fg "colour27" 
+set -g status-right "< %Y-%m-%d %H:%M < #h"
+
 set -g pane-border-fg "colour240"
-set -g status-left-attr "none"
-setw -g window-status-fg "colour248"
+set -g pane-active-border-fg "colour117"
+
+setw -g window-status-fg "colour244"
+setw -g window-status-bg "colour236"
 setw -g window-status-attr "none"
-setw -g window-status-activity-bg "colour000"
 setw -g window-status-activity-attr "none"
 setw -g window-status-activity-fg "colour117"
+setw -g window-status-activity-bg "colour236"
 setw -g window-status-separator ""
-setw -g window-status-bg "colour000"
-set -g status-right "< %Y-%m-%d %H:%M < #h"
 setw -g window-status-format "#I > #W "
 setw -g window-status-current-format "#I > #W "
+setw -g window-status-current-fg "colour27"
