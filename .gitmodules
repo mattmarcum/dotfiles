@@ -1,3 +1,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts.git
+[submodule ".bash/git-aware-prompt"]
+	path = .bash/git-aware-prompt
+	url = git@github.com:jimeh/git-aware-prompt.git
