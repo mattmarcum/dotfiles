@@ -2,8 +2,8 @@
 " Do NOT add bundles to this list, as they might get removed when you upgrade
 " Maximum Awesome.
 " Please create ~/.vimrc.bundles.local and add any extra bundles you want there
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/vundle'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
