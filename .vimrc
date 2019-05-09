@@ -6,6 +6,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
@@ -23,3 +24,14 @@ call plug#end()
 
 set number
 set ruler
+set visualbell
+
+:let mapleader = ","
+:map <leader>h :noh<CR>
+nnoremap <leader>d :NERDTreeToggle<CR>
+filetype plugin indent on
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set list
