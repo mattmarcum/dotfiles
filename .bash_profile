@@ -35,3 +35,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+alias aws='docker run --rm -it -v ~/.aws:/root/.aws cgswong/aws:aws'
+alias ecr-login='eval $(aws --region us-east-2 ecr get-login --no-include-email | sed "s|https://.*|https://docker.oaganalytics.com|")'
+export OAG_HOME=~/oag #This is deprecated in favor of OAG_DIR, but not everything is switched over yet
+export OAG_DIR=~/oag/.oag
+export JAVA_HOME=$(/usr/libexec/java_home)
