@@ -29,7 +29,6 @@ fi
 
 export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -37,6 +36,13 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws cgswong/aws:aws'
 alias ecr-login='eval $(aws --region us-east-2 ecr get-login --no-include-email | sed "s|https://.*|https://docker.oaganalytics.com|")'
+alias ecr-raw-login='eval $(aws ecr get-login --no-include-email | sed "s|\(https://.*\.com\).*$|\1|")'
 export OAG_HOME=~/oag #This is deprecated in favor of OAG_DIR, but not everything is switched over yet
 export OAG_DIR=~/oag/.oag
 export JAVA_HOME=$(/usr/libexec/java_home)
+alias grhh='git reset head --hard'
+alias gco='git checkout'
+alias gp='git pull'
+alias gcb='git checkout -b'
+alias gps='git push'
+alias gpu='git push -u origin `git rev-parse --abbrev-ref HEAD`'
