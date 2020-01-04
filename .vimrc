@@ -35,3 +35,5 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list
+"make jj do esc"
+inoremap jj <Esc>
