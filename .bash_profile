@@ -46,3 +46,8 @@ alias gp='git pull'
 alias gcb='git checkout -b'
 alias gps='git push'
 alias gpu='git push -u origin `git rev-parse --abbrev-ref HEAD`'
+alias gs='git status'
+alias glb='git for-each-ref --sort=committerdate refs/heads/ --format="%(committerdate:short) %(refname:short)"'
+alias gcm='git commit -m '
+__git_complete gco _git_checkout
+alias ll='ls -la'
