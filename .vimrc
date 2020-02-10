@@ -22,13 +22,29 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+
 set number
 set ruler
 set visualbell
+set paste
 
 :let mapleader = ","
 :map <leader>h :noh<CR>
 nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>o :GFiles --exclude-standard --others --cached<CR>
+
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2

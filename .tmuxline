@@ -16,7 +16,7 @@ set -g status-left-attr "none"
 
 set -g status-right-length "100"
 set -g status-right-attr "none"
-set -g status-right-fg "colour255" 
+set -g status-right-fg "colour255"
 set -g status-right "< %Y-%m-%d %H:%M < #h"
 
 set -g pane-border-fg "colour240"
