@@ -31,16 +31,7 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/home/mmarcum/go
 
 export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-alias aws='docker run --rm -it -v ~/.aws:/root/.aws cgswong/aws:aws'
-alias ecr-login='eval $(aws --region us-east-2 ecr get-login --no-include-email | sed "s|https://.*|https://docker.oaganalytics.com|")'
-alias ecr-raw-login='eval $(aws ecr get-login --no-include-email | sed "s|\(https://.*\.com\).*$|\1|")'
-export OAG_HOME=~/oag #This is deprecated in favor of OAG_DIR, but not everything is switched over yet
-export OAG_DIR=~/oag/.oag
 alias grhh='git reset head --hard'
 alias gco='git checkout'
 alias gp='git pull'
@@ -52,5 +43,11 @@ alias glb='git for-each-ref --sort=committerdate refs/heads/ --format="%(committ
 alias gcm='git commit -m '
 alias gap='git add -p'
 alias gd='git diff'
+alias gpf='git push --force-with-lease'
+alias gfm='git fetch origin master'
+alias gfo='git fetch origin'
+alias grm='git rebase origin/master'
 __git_complete gco _git_checkout
 alias ll='ls -la'
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
