@@ -47,7 +47,10 @@ alias gpf='git push --force-with-lease'
 alias gfm='git fetch origin master'
 alias gfo='git fetch origin'
 alias grm='git rebase origin/master'
+alias gca='git commit --amend'
 __git_complete gco _git_checkout
 alias ll='ls -la'
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+. "$HOME/.cargo/env"
+export NODE_EXTRA_CA_CERTS=~/dotfiles/caddy-root-ca.crt
