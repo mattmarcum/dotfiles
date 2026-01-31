@@ -52,5 +52,12 @@ __git_complete gco _git_checkout
 alias ll='ls -la'
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-. "$HOME/.cargo/env"
 export NODE_EXTRA_CA_CERTS=~/dotfiles/caddy-root-ca.crt
+export OLLAMA_MODELS=/usr/share/ollama/models
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# Created by `pipx` on 2025-08-05 21:06:41
+export PATH="$PATH:/home/mmarcum/.local/bin"
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/home/mmarcum/.lmstudio/bin"
